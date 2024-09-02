@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Argonia RPG</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="combat.js"></script>
+</head>
+
+<body>
+<button onclick="location.href='/'">To character demo</button>
+<table style="width:100%">
+    <tr>
+        <td style="width:30%">
+            <div id="enemyDiv">
+                <img src="images/argy.png" alt="Argy">
+                <p style="text-align:center">xX_ModHater69_Xx</p>
+            </div>
+        </td>
+        <td style="width:70%">
+            <div id="userCharactersDiv">
+                <span class="userCharacterDiv">
+                    <img src="images/character_sprite.png" alt="character sprite">
+                    <p>Mod 1</p>
+                </span>
+            </div>
+        </td>
+    </tr>
+</table>
+<button onclick="addCombatant()">Add combatant</button>
+<button onclick="startCombat()">Start combat</button>
+<div id="combatLog"></div>
+</body>
+</html>

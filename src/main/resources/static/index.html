@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Argonia RPG</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+<button onclick="location.href='/combat.html'">To combat demo</button>
+<div id="createCharDiv">
+    <input type="text" id="createCharName" placeholder="Character name"> <button id="createCharBtn" onclick="createChar()">Create character</button>
+</div>
+<div id="userCharacterData" style="display:none">
+    User: <span id="twitchUsername"></span><br />
+    Name: <span id="userCharacterName"></span><br />
+    Level: <span id="userCharacterLevel"></span><br />
+    Attack: <span id="userCharacterAttack"></span><br />
+    Defense: <span id="userCharacterDefense"></span><br />
+    Gold: <span id="userCharacterGold"></span><br />
+    Spells: <span id="userCharacterSpells"></span> <button id="addSpellBtn" onclick="addSpell()">Learn random spell</button><br />
+    Feats: <span id="userCharacterFeats"></span><br />
+    Equipment: <span id="userCharacterEquipment"></span>
+</div>
+</body>
+</html>
