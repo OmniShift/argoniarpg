@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.3</version>
+        <version>3.4.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.kingargaroth</groupId>
@@ -22,10 +22,16 @@
 
     <properties>
         <java.version>22</java.version>
+        <commons-lang3.version>3.17.0</commons-lang3.version>
         <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
@@ -47,6 +53,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-commons</artifactId>
         </dependency>
 
         <dependency>
@@ -82,6 +92,29 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+            <groupId>com.ly.smart-doc</groupId>
+            <artifactId>smart-doc-maven-plugin</artifactId>
+            <version>3.0.8</version>
+            <configuration>
+                <configFile>./src/main/resources/smart-doc.json</configFile>
+                <projectName>${project.description}</projectName>
+                <includes>
+                    <!-- Paging using jpa requires the source code package used by include -->
+                    <include>org.springframework.data:spring-data-commons</include>
+                </includes>
+            </configuration>
+            <executions>
+                <execution>
+                    <!--If you do not need to start smart-doc when compiling, comment out phase-->
+                    <phase>compile</phase>
+                    <goals>
+                        <!--smart-doc provides html, openapi, markdown and other goals, which can be configured as needed-->
+                        <goal>html</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
         </plugins>
     </build>
 </project>

@@ -43,9 +43,9 @@ async function addSpell() {
         }
     });
     userCharacter = await response.json();
-    if (response.status == 400) {
+    if (response.status == 400 || response.status == 409) {
         let addSpellBtn = document.getElementById('addSpellBtn');
-        addSpellBtn.textContent = response.headers.get('Error-Message');
+        addSpellBtn.textContent = response.headers.get('Error-Description');
         addSpellBtn.disabled = true;
     } else {
         document.getElementById('userCharacterSpells').textContent = userCharacter.spells;

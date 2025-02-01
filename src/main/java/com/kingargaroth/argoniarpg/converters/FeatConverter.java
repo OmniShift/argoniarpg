@@ -3,7 +3,7 @@ package com.kingargaroth.argoniarpg.converters;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kingargaroth.argoniarpg.entities.Feat;
+import com.kingargaroth.argoniarpg.entities.helpers.Feat;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 import lombok.extern.slf4j.Slf4j;

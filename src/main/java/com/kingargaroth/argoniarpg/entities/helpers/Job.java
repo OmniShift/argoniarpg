@@ -1,4 +1,4 @@
-package com.kingargaroth.argoniarpg.entities;
+package com.kingargaroth.argoniarpg.entities.helpers;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
